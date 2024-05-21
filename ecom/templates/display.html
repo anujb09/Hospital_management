@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>User Input</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .anchor {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Custom style for centering and shadow */
+        .custom-form {
+            max-width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="custom-form" method="post" action="/submit_user">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="nameInput" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="emailInput" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mobileInput" class="form-label">Mobile No:</label>
+                        <input type="tel" class="form-control" id="mobileInput" placeholder="Enter your mobile number">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="submit" class="btn btn-danger" value="Add User">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
